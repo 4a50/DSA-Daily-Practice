@@ -12,6 +12,8 @@ namespace MockInterviews
       int[] arr = new int[] { 5, 1, 5, 1, 6, 5, 5 };
       int oddNumber = OddNumber(arr);
       Console.WriteLine("Integer Repeated Odd Number of Times: " + oddNumber);
+
+      Console.WriteLine($"Current Username: {Environment.UserName} {Environment.MachineName} {Environment.CurrentDirectory}");
     }    
       //# array of integers and one appears an odd number of times
 

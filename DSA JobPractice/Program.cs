@@ -13,7 +13,12 @@ namespace DSA_JobPractice
       //IceCream();
       //DayOfTheProgrammer();
       //BigSort();
-      InsertionSortPtOne();
+      //InsertionSortPtOne();
+      
+      Console.WriteLine("False: " + LeetCodeChallenges.DailyFour(new int[] { 4,2, 1 }));
+      Console.WriteLine("True: " + LeetCodeChallenges.DailyFour(new int[] { 4, 2, 3 }));
+      Console.WriteLine("False: " + LeetCodeChallenges.DailyFour(new int[] { 3, 4, 2, 3 }));
+      Console.WriteLine("True: " + LeetCodeChallenges.DailyFour(new int[] { 5, 7, 1, 8 }));
     }
     static public void WeightedUniformStrings()
     {
