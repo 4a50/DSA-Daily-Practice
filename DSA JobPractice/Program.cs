@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Numerics;
 
 namespace DSA_JobPractice
@@ -7,18 +8,23 @@ namespace DSA_JobPractice
   {
     static void Main(string[] args)
     {//
-      //WeightedUniformStrings();
-      //SumArray();
-      //CompareTheTriplets();
-      //IceCream();
-      //DayOfTheProgrammer();
-      //BigSort();
-      //InsertionSortPtOne();
-      
-      Console.WriteLine("False: " + LeetCodeChallenges.DailyFour(new int[] { 4,2, 1 }));
-      Console.WriteLine("True: " + LeetCodeChallenges.DailyFour(new int[] { 4, 2, 3 }));
-      Console.WriteLine("False: " + LeetCodeChallenges.DailyFour(new int[] { 3, 4, 2, 3 }));
-      Console.WriteLine("True: " + LeetCodeChallenges.DailyFour(new int[] { 5, 7, 1, 8 }));
+     //WeightedUniformStrings();
+     //SumArray();
+     //CompareTheTriplets();
+     //IceCream();
+     //DayOfTheProgrammer();
+     //BigSort();
+     //InsertionSortPtOne();
+
+      //Console.WriteLine("False: " + LeetCodeChallenges.DailyFour(new int[] { 4,2, 1 }));
+      //Console.WriteLine("True: " + LeetCodeChallenges.DailyFour(new int[] { 4, 2, 3 }));
+      //Console.WriteLine("False: " + LeetCodeChallenges.DailyFour(new int[] { 3, 4, 2, 3 }));
+      //Console.WriteLine("True: " + LeetCodeChallenges.DailyFour(new int[] { 5, 7, 1, 8 }));
+
+      TicketStackProblem ticketProb = new TicketStackProblem();
+      List<string> result = ticketProb.SortTickets();
+      TicketStackProblem.PrintItenerary(result);
+
     }
     static public void WeightedUniformStrings()
     {
