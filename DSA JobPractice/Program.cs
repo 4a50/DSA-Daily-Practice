@@ -21,10 +21,14 @@ namespace DSA_JobPractice
       //Console.WriteLine("False: " + LeetCodeChallenges.DailyFour(new int[] { 3, 4, 2, 3 }));
       //Console.WriteLine("True: " + LeetCodeChallenges.DailyFour(new int[] { 5, 7, 1, 8 }));
 
-      TicketStackProblem ticketProb = new TicketStackProblem();
-      List<string> result = ticketProb.SortTickets();
-      TicketStackProblem.PrintItenerary(result);
+      //TicketStackProblem ticketProb = new TicketStackProblem();
+      //List<string> result = ticketProb.SortTickets();
+      //TicketStackProblem.PrintItenerary(result);
 
+      int[] intArr = new int[] { 2, 4, 6, 9 };
+      int target = 10;
+      int[] result = LeetCodeChallenges.TwoSums(intArr, target);
+      Console.WriteLine($"First Index: {result[0]} Second Index: {result[1]}");
     }
     static public void WeightedUniformStrings()
     {
