@@ -83,5 +83,27 @@ namespace DSA_JobPractice
       if (mod > 1) return false;
       else { return true; }
     }
+
+    //TODO: Really analyze this code.  Not sure how to do with existing knowledge
+    public static int MinDistance(string word1, string word2)
+    {
+    //Given two strings return the minimum number of steps required to make word 1 and word 2 the same.
+    //In ONE step you can delete exactly ONE character in either string.
+    //Constraints: 1 <= word1 length, word2 length <= 500
+    //only lowercase letters
+    // EXAMPLE: "leetcode"  "etco"  => 4 
+
+      //Track the index number to identify where the match takes place.
+      //Take word two first letter and look through word one until a match:
+      // 
+      //  when match is found compare the next letter for matches.
+
+
+
+
+      return 0;
+    }
+
+    public static int SortedListToBST() { return 0; }
   }
 }

@@ -121,5 +121,56 @@ namespace DSA_JobPractice
       }
     }
 
+    public static List<int> rotLeft(List<int> a, int d)
+    {
+      //Brute Force:
+      //rotate each int d number of times
+      //while counter < d do the following
+      //make a temp int to store the [0] element value
+      //iterate through the array, starting at index 1.
+      //array[i-1] = array[i];
+      //if i == array.length - 1 then array[i] = tempInt;
+      // WHILE to count FOR to interate
+      //Passed All Tests, but not optimized, so missed the last tests.
+      //Take 2:
+      //Recursion?      
+      //Did not pass time requirement!
+      //Take 3:
+      //split the elements up from 0:d and d+1:a.length
+      //swap places.
+      ///Recursive Solution
+      //int firstArrayIndexValue = 0;
+      //if (d == 0) { return a; }
+      //firstArrayIndexValue = a[0];
+      //for (int i = 1; i < a.Count; i++)
+      //{
+      //  a[i - 1] = a[i];
+      //  if (i == a.Count - 1) { a[i] = firstArrayIndexValue; }
+      //}
+      //d--;
+      //return rotLeft(a, d);
+      ///
+    //  int[] splitOne = new int[d - 1];
+    //  int[] splitTwo = new int[a.Count - d];
+    //  if (d < a.Count)
+    //  {
+    //    int[] arr = a.ToArray();
+    //    for (int i = 0; i < arr.Length; i++)
+    //    {
+    //      Console.WriteLine(arr[i]);
+    //      if (i < d - 1)
+    //      {
+    //        Console.WriteLine("First Half");
+    //        splitOne[i] = a[i];
+    //      }
+    //      else
+    //      {
+    //        splitTwo[i - d] = a[i];
+    //      }
+    //    }
+    //  }
+      return new List<int>();
+    //}
+  
   }
 }

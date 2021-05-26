@@ -7,24 +7,28 @@ namespace DSA_JobPractice
   class Program
   {
     static void Main(string[] args)
-    {//
-     //WeightedUniformStrings();
-     //SumArray();
-     //CompareTheTriplets();
-     //IceCream();
-     //DayOfTheProgrammer();
-     //BigSort();
-     //InsertionSortPtOne();
+    {
+      List<int> arr = new List<int>{ 1, 2, 3, 4, 5 };
+      foreach (int i in arr) { Console.Write($"[{i}] "); }
+      Console.WriteLine();
+      HackerRankChallenges.rotLeft(arr, 2);
+      foreach (int i in arr) { Console.Write($"[{i}] "); }
 
-      //Console.WriteLine("False: " + LeetCodeChallenges.DailyFour(new int[] { 4,2, 1 }));
-      //Console.WriteLine("True: " + LeetCodeChallenges.DailyFour(new int[] { 4, 2, 3 }));
-      //Console.WriteLine("False: " + LeetCodeChallenges.DailyFour(new int[] { 3, 4, 2, 3 }));
-      //Console.WriteLine("True: " + LeetCodeChallenges.DailyFour(new int[] { 5, 7, 1, 8 }));
 
+    }
+    public static void RunAllHackerRankChallenges() { } 
+    public static void RunAllOtherDSAChallenges()
+    {
       TicketStackProblem ticketProb = new TicketStackProblem();
       List<string> result = ticketProb.SortTickets();
       TicketStackProblem.PrintItenerary(result);
-
+    }
+    public static void RunLeetCodeChallenges()
+    {
+      Console.WriteLine("False: " + LeetCodeChallenges.DailyFour(new int[] { 4,2, 1 }));
+      Console.WriteLine("True: " + LeetCodeChallenges.DailyFour(new int[] { 4, 2, 3 }));
+      Console.WriteLine("False: " + LeetCodeChallenges.DailyFour(new int[] { 3, 4, 2, 3 }));
+      Console.WriteLine("True: " + LeetCodeChallenges.DailyFour(new int[] { 5, 7, 1, 8 }));
     }
     static public void WeightedUniformStrings()
     {
