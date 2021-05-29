@@ -24,6 +24,8 @@ namespace DSA_JobPractice
       // iterate through that string array end to start adding the word and a space into the Stringbuilder
       // if the element in the array is zero we will omit the space at the end.
 
+      //DataStructure could use.  Stack.  Make each word a node and place that in a stack, then pop each off the stack and place in new array.
+      //BigO seems to be O(n) space
       StringBuilder sb = new StringBuilder();
       string[] splitString = str.Split(" ");
       for (int i = splitString.Length - 1; i >= 0; i--)

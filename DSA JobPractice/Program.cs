@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Numerics;
+using DataStructures;
 
 namespace DSA_JobPractice
 {
@@ -10,8 +11,29 @@ namespace DSA_JobPractice
     {
       List<int> arr = new List<int> { 1, 2, 3, 4, 5 };
       string testString = "Do a barrel roll Fox";
-      string result = MicrosoftPrep.InputStringReverseByWord(testString);
-      Console.WriteLine($"[{result}]");
+
+      DataStructures.Stack<string> stack = CreateStack();
+      Console.WriteLine($"Stack Top: {stack.Top.Value}");
+      stack.Pop();
+      Console.WriteLine($"Stack Top: {stack.Top.Value}");
+      stack.Pop();
+      Console.WriteLine($"Stack Top: {stack.Top.Value}");
+      stack.Pop();
+      Console.WriteLine($"Stack Top: {stack.Top.Value}");
+
+
+    }
+    public static DataStructures.Stack<string> CreateStack()
+    {
+      DataStructures.Stack<string> stack = new DataStructures.Stack<string>();      
+      string[] strArr = new string[] { "Fox", "Falco", "Slippy", "Peppy" };      
+      for (int i = 0; i < strArr.Length; i++)
+      {
+        stack.Push(new DataStructures.Node<string> (strArr[i]));
+      }
+
+      return stack;
+
     }
     public static void RunAllHackerRankChallenges() { } 
     public static void RunAllOtherDSAChallenges()

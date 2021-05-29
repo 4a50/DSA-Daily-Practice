@@ -6,4 +6,8 @@
     <RootNamespace>DSA_JobPractice</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DataStructures\DataStructures.csproj" />
+  </ItemGroup>
+
 </Project>
