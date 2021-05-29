@@ -8,13 +8,10 @@ namespace DSA_JobPractice
   {
     static void Main(string[] args)
     {
-      List<int> arr = new List<int>{ 1, 2, 3, 4, 5 };
-      foreach (int i in arr) { Console.Write($"[{i}] "); }
-      Console.WriteLine();
-      HackerRankChallenges.rotLeft(arr, 2);
-      foreach (int i in arr) { Console.Write($"[{i}] "); }
-
-
+      List<int> arr = new List<int> { 1, 2, 3, 4, 5 };
+      string testString = "Do a barrel roll Fox";
+      string result = MicrosoftPrep.InputStringReverseByWord(testString);
+      Console.WriteLine($"[{result}]");
     }
     public static void RunAllHackerRankChallenges() { } 
     public static void RunAllOtherDSAChallenges()
