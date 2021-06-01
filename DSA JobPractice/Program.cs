@@ -11,18 +11,24 @@ namespace DSA_JobPractice
     {
       List<int> arr = new List<int> { 1, 2, 3, 4, 5 };
       string testString = "Do a barrel roll Fox";
+      int[] arrInt = new int[] { 6, 3, 2, 78, 1, 77, 2, 4 };
+      DisplayArray(arrInt);
+      DataStructures.MergeSort.SortInt(arrInt);
+      DisplayArray(arrInt);
 
-      DataStructures.Stack<string> stack = CreateStack();
-      Console.WriteLine($"Stack Top: {stack.Top.Value}");
-      stack.Pop();
-      Console.WriteLine($"Stack Top: {stack.Top.Value}");
-      stack.Pop();
-      Console.WriteLine($"Stack Top: {stack.Top.Value}");
-      stack.Pop();
-      Console.WriteLine($"Stack Top: {stack.Top.Value}");
+
+
 
 
     }
+    public static void DisplayArray(int[] arr)
+    {
+      for (int i = 0; i < arr.Length; i++){
+        if (i != arr.Length - 1) Console.Write($"[{arr[i]}] => ");
+        else { Console.WriteLine($"[{arr[i]}]"); }
+      }
+    }
+    
     public static DataStructures.Stack<string> CreateStack()
     {
       DataStructures.Stack<string> stack = new DataStructures.Stack<string>();      
