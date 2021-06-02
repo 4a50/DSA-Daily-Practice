@@ -11,20 +11,27 @@ namespace DSA_JobPractice
     {
       List<int> arr = new List<int> { 1, 2, 3, 4, 5 };
       string testString = "Do a barrel roll Fox";
-      int[] arrInt = new int[] { 6, 3, 2, 78, 1, 77};
+      int[] arrInt = CreateTestIntArray(0, 200, 4000);
+      Console.WriteLine();
       DisplayArray(arrInt);
       DataStructures.MergeSort.SortInt(arrInt);
+      Console.WriteLine();
       DisplayArray(arrInt);
-
-
-
-
-
+    }
+    public static int[] CreateTestIntArray(int lowest, int highest, int numElements)
+    {
+      Random randGen = new Random();      
+      int[] result = new int[numElements];
+      for (int i = 0; i < result.Length; i++)
+      {
+        result[i] = randGen.Next(lowest, highest + 1);
+      }
+      return result;
     }
     public static void DisplayArray(int[] arr)
     {
       for (int i = 0; i < arr.Length; i++){
-        if (i != arr.Length - 1) Console.Write($"[{arr[i]}] => ");
+        if (i != arr.Length - 1) Console.Write($"[{arr[i]}] ");
         else { Console.WriteLine($"[{arr[i]}]"); }
       }
     }

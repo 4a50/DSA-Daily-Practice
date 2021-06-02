@@ -30,7 +30,7 @@ namespace DataStructures
       //Sort Left
       Sort(arr, leftStart, middle);
       Sort(arr, middle + 1, rightEnd);
-      MergeHalves(arr, leftStart, rightEnd, middle);
+       MergeHalves(arr, leftStart, rightEnd, middle);
     }
     private static void MergeHalves(int[] arr, int left, int right, int middle)
     {
