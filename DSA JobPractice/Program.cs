@@ -11,11 +11,15 @@ namespace DSA_JobPractice
     {
       List<int> arr = new List<int> { 1, 2, 3, 4, 5 };
       string testString = "Do a barrel roll Fox";
-      int[] arrInt = CreateTestIntArray(0, 200, 4000);
-      Console.WriteLine();
+      int[] arrInt = CreateTestIntArray(0, 200, 5);
+      Console.WriteLine("Merge Sort");
       DisplayArray(arrInt);
       DataStructures.MergeSort.SortInt(arrInt);
-      Console.WriteLine();
+      DisplayArray(arrInt);
+      Console.WriteLine("Quick Sort");
+      arrInt = CreateTestIntArray(0, 200, 25);
+      DisplayArray(arrInt);
+      QuickSort.Sort(arrInt, 0, arrInt.Length - 1);
       DisplayArray(arrInt);
     }
     public static int[] CreateTestIntArray(int lowest, int highest, int numElements)
@@ -30,6 +34,7 @@ namespace DSA_JobPractice
     }
     public static void DisplayArray(int[] arr)
     {
+      Console.WriteLine();
       for (int i = 0; i < arr.Length; i++){
         if (i != arr.Length - 1) Console.Write($"[{arr[i]}] ");
         else { Console.WriteLine($"[{arr[i]}]"); }
