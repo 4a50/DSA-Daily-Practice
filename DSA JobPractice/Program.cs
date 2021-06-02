@@ -11,7 +11,7 @@ namespace DSA_JobPractice
     {
       List<int> arr = new List<int> { 1, 2, 3, 4, 5 };
       string testString = "Do a barrel roll Fox";
-      int[] arrInt = new int[] { 6, 3, 2, 78, 1, 77, 2, 4 };
+      int[] arrInt = new int[] { 6, 3, 2, 78, 1, 77};
       DisplayArray(arrInt);
       DataStructures.MergeSort.SortInt(arrInt);
       DisplayArray(arrInt);
