@@ -8,9 +8,9 @@ namespace DataStructures
   {
     public static void Sort(int[] arr, int start, int end)
     {
+      //ensure start is less than end
       if (start < end)
       {
-        //ensure start is less than end
         //  set partition value => Partition
         int partVal = Partition(start, end, arr);
         //  sort elements before partition
@@ -22,7 +22,7 @@ namespace DataStructures
 
     public static int Partition(int start, int end, int[] arr)
     {
-      ////Built with pivot at end of array      
+      ////Built with pivot at start of array      
       //Set pivot index and value
       int pivInd = start;
       int pivVal = arr[pivInd];

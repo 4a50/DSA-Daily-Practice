@@ -9,18 +9,13 @@ namespace DSA_JobPractice
   {
     static void Main(string[] args)
     {
-      List<int> arr = new List<int> { 1, 2, 3, 4, 5 };
-      string testString = "Do a barrel roll Fox";
-      int[] arrInt = CreateTestIntArray(0, 200, 5);
-      Console.WriteLine("Merge Sort");
-      DisplayArray(arrInt);
-      DataStructures.MergeSort.SortInt(arrInt);
-      DisplayArray(arrInt);
-      Console.WriteLine("Quick Sort");
-      arrInt = CreateTestIntArray(0, 200, 25);
-      DisplayArray(arrInt);
-      QuickSort.Sort(arrInt, 0, arrInt.Length - 1);
-      DisplayArray(arrInt);
+      int[] arr = new int[] { 4, 2, 1, 1, 2 };
+      List<bool> result = MicrosoftPrep.KidsWithCandies(arr, 1);
+      foreach(bool b in result)
+      {
+        Console.Write($"[{b}] ");
+      }
+      Console.WriteLine();
     }
     public static int[] CreateTestIntArray(int lowest, int highest, int numElements)
     {
