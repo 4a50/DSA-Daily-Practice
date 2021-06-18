@@ -6,6 +6,69 @@ namespace DSA_JobPractice
 {
   static class MicrosoftPrep
   {
+    //Sample: "()([){]{}}"
+    
+    public static bool BalancedBrackets(string str)
+    {
+      //are string is greater than 1 char
+      if (str.Length > 1)
+      {
+        //create a queue
+        Queue<char> q = new Queue<char>();
+        //create a p1
+        int p1 = 0;
+        //create a p2
+        int p2 = 1;
+        //length
+        int strLen = str.Length - 1;
+
+        //while p1 and p2 are less than str len
+        while(p1 < strLen && p2 < strLen)
+        {
+          // test if p1 is matched to p2
+          if (BracketMatched(str[p1], str[p2]))
+            {
+              //  true p1 = p2+1 && p2 = p1+1
+              p1 = p2 + 1;
+              p2 = p1 + 1;
+            }
+            else
+            {
+              //  false enqueue p2 && p2++
+              q.Enqueue(str[p2]);
+              p2++;
+              if (p2 > strLen) return false;
+            }
+        }
+        // then evaluate queue
+        char bOne;
+        char bTwo;
+        while (q.Count > 0)
+        {
+          if (!q.TryDequeue(out bOne)) return false;
+          if (!q.TryDequeue(out bTwo)) return false;          
+          if (!BracketMatched(bOne, bTwo)) return false;          //   dequeue char1, dequeue char 2 not matche return false
+
+        }
+      }
+        return true;
+    }
+    public static bool BracketMatched(char a, char b)
+    {
+      switch(a)
+      {
+        case '[':
+          if (b == ']') return true;
+          break;
+        case '{':
+          if (b == '}') return true;
+          break;
+        case '(':
+          if (b == ')') return true;
+          break;        
+      }
+      return false;
+    }
     public static string InputStringReverseByWord(string str){
 
       //Questions:
