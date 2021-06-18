@@ -17,11 +17,13 @@ namespace DSA_JobPractice
 
 
 
+
     }
     public static void DisplayArray(int[] arr)
     {
+      Console.WriteLine();
       for (int i = 0; i < arr.Length; i++){
-        if (i != arr.Length - 1) Console.Write($"[{arr[i]}] => ");
+        if (i != arr.Length - 1) Console.Write($"[{arr[i]}] ");
         else { Console.WriteLine($"[{arr[i]}]"); }
       }
     }

@@ -98,5 +98,28 @@ namespace DSA_JobPractice
       }
       return sb.ToString();
       }
-  }  
+  public static List<bool> KidsWithCandies(int[] candies, int extraCandies)
+  {
+    //Problem Domain:  can the extraCandies be distributed such that a kid can have
+    //the greatest number of candies
+    int maxKidCandy = candies[0];
+    List<bool> greatestCandies = new List<bool>();
+
+    //example [2, 3, 5, 1, 3], three extra
+    // [true, true, true, false, true]
+
+    //Determine the greatest number in the array. That kid doesnt need any
+    foreach (int c in candies) {  if (c > maxKidCandy) { maxKidCandy = c; } }
+
+    //if some or all of the candies are given to the other kids can they equal greates number.
+    // if they can then true, if not false.
+    foreach(int c in candies)
+      {
+        if (c + extraCandies >= maxKidCandy) { greatestCandies.Add(true); }
+        else { greatestCandies.Add(false); }
+      }
+      return greatestCandies;
+  }
+  }
 }
+//S: O(n), T: O(N)
