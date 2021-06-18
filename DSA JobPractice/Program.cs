@@ -9,23 +9,15 @@ namespace DSA_JobPractice
   {
     static void Main(string[] args)
     {
-      int[] arr = new int[] { 4, 2, 1, 1, 2 };
-      List<bool> result = MicrosoftPrep.KidsWithCandies(arr, 1);
-      foreach(bool b in result)
-      {
-        Console.Write($"[{b}] ");
-      }
-      Console.WriteLine();
-    }
-    public static int[] CreateTestIntArray(int lowest, int highest, int numElements)
-    {
-      Random randGen = new Random();      
-      int[] result = new int[numElements];
-      for (int i = 0; i < result.Length; i++)
-      {
-        result[i] = randGen.Next(lowest, highest + 1);
-      }
-      return result;
+      string str = "()[]{()}";
+
+
+      Console.WriteLine(MicrosoftPrep.BalancedBrackets(str));
+
+
+
+
+
     }
     public static void DisplayArray(int[] arr)
     {
