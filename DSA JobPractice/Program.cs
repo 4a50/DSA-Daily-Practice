@@ -12,7 +12,9 @@ namespace DSA_JobPractice
       string str = "()[]{()}";
 
 
-      Console.WriteLine(MicrosoftPrep.BalancedBrackets(str));
+      //Console.WriteLine(MicrosoftPrep.BalancedBrackets(str));
+      //Console.WriteLine(EulerProject.MultiplesOfThreeAndFive(1000));
+      Console.WriteLine("Even Fibonacci Nums: " + EulerProject.EvenFibonacciNumbers(4000000));
 
 
 
