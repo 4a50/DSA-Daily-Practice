@@ -50,5 +50,28 @@ namespace TestBench
       return result;
 
     }
+    public static void plusMinus(List<int> arr)
+    {
+      float count = (float)arr.Count;
+      int pos = 0;
+      int neg = 0;
+      int zero = 0;
+      foreach (int i in arr)
+      {
+        if (i < 0) neg++;
+        else if (i == 0) zero++;
+        else if (i > 0) pos++;
+      }
+      Console.WriteLine($"{pos} {neg} {zero}");
+      float posRatio = pos / count;
+      float negRatio = neg / count;
+      float zeroRatio = zero / count;
+      Console.WriteLine($"{posRatio}");
+
+      Console.WriteLine(posRatio.ToString());
+      Console.WriteLine(negRatio.ToString());
+      Console.WriteLine(zeroRatio.ToString());
+
+    }
   }
 }
