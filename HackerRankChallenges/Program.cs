@@ -73,5 +73,15 @@ namespace TestBench
       Console.WriteLine(zeroRatio.ToString());
 
     }
+    public static void staircase(int n)
+    {
+      char[] poundArray = new char[n];
+      for (int i = 0; i < poundArray.Length; i++) { poundArray[i] = ' '; }
+      for (int i = poundArray.Length - 1; i >= 0; i--)
+      {
+        poundArray[i] = '#';
+        Console.WriteLine(new string(poundArray));
+      }
+    }
   }
 }
