@@ -17,6 +17,11 @@ namespace DSA_JobPractice
       //Console.WriteLine("Even Fibonacci Nums: " + EulerProject.EvenFibonacciNumbers(4000000));
       //Console.WriteLine($"Largest Prime for 600851475143: {EulerProject.SearchForLargestPrime(600851475143)}");
 
+      Console.WriteLine(ProjectEuler.LargestPalindromeProductOfTwoNumbers(4));
+
+      Console.WriteLine(ProjectEuler.IsPalindrome(906609));
+
+
       
     }
     public static void DisplayArray(int[] arr)
