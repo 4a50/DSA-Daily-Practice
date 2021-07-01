@@ -40,9 +40,26 @@ namespace DSA_JobPractice
     
     return sum;
   }
-  }
-  public static int LargestPrimeFactor (long inputNum)
+  
+  public static long SearchForLargestPrime(long num)
   {
-    
+
+      long k = 2;
+      long kCount = k;
+      while (k*k <= num)
+      {
+        kCount = k * k;
+        if (num % k == 0)
+        {
+          num /= k;
+        }
+        else
+        {
+          ++k;
+        }
+        
+      }
+    return num;
+  }
   }
 }

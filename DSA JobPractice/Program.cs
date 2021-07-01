@@ -14,12 +14,10 @@ namespace DSA_JobPractice
 
       //Console.WriteLine(MicrosoftPrep.BalancedBrackets(str));
       //Console.WriteLine(EulerProject.MultiplesOfThreeAndFive(1000));
-      Console.WriteLine("Even Fibonacci Nums: " + EulerProject.EvenFibonacciNumbers(4000000));
+      //Console.WriteLine("Even Fibonacci Nums: " + EulerProject.EvenFibonacciNumbers(4000000));
+      //Console.WriteLine($"Largest Prime for 600851475143: {EulerProject.SearchForLargestPrime(600851475143)}");
 
-
-
-
-
+      
     }
     public static void DisplayArray(int[] arr)
     {

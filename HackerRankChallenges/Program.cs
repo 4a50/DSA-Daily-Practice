@@ -7,14 +7,15 @@ namespace TestBench
   {
     static void Main(string[] args)
     {
-      string s = "abccddde";
-      int[] queries = { 6, 1, 3, 12, 5, 9, 10 };
-      string[] result = weightedUniformStrings(s, queries);
-      for (int i = 0; i < result.Length; i++)
-      {
-        Console.Write($"[ {result[i] } ] ");
-        Console.WriteLine();
-      }
+      //string s = "abccddde";
+      //int[] queries = { 6, 1, 3, 12, 5, 9, 10 };
+      //string[] result = weightedUniformStrings(s, queries);
+      //for (int i = 0; i < result.Length; i++)
+      //{
+      //  Console.Write($"[ {result[i] } ] ");
+      //  Console.WriteLine();
+      //}
+      Fin
     }
     static string[] weightedUniformStrings(string s, int[] queries)
     {
