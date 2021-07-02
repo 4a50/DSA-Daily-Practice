@@ -62,7 +62,7 @@ namespace DSA_JobPractice
     return num;
   }
   
-    public static int LargestPalindromeProductOfTwoNumbers(int numDigits) {
+  public static int LargestPalindromeProductOfTwoNumbers(int numDigits) {
 
       //A palindromic number reads the same both ways. The largest palindrome made from the product of two 2 - digit numbers is 9009 = 91 × 99.
       //Find the largest palindrome made from the product of two 3 - digit numbers.
@@ -114,6 +114,28 @@ namespace DSA_JobPractice
     }
     return true;
 
+  }
+
+  public static int SmallestDivisibleNumberByAllNumbers(int n)
+  {
+      //Count by n it is largest number must be divisible
+      bool allDivisible = false;
+      int counter = n;
+      while (!allDivisible)
+      {
+        allDivisible = true;
+        for (int i = 1; i <= n; i++)
+        {
+          if (counter % i != 0)
+          {
+            
+            allDivisible = false;
+            break;
+          }
+        }
+          counter += n;
+      }
+    return counter - n;
   }
   }
 }

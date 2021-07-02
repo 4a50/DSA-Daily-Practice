@@ -16,10 +16,8 @@ namespace DSA_JobPractice
       //Console.WriteLine(EulerProject.MultiplesOfThreeAndFive(1000));
       //Console.WriteLine("Even Fibonacci Nums: " + EulerProject.EvenFibonacciNumbers(4000000));
       //Console.WriteLine($"Largest Prime for 600851475143: {EulerProject.SearchForLargestPrime(600851475143)}");
-
-      Console.WriteLine(ProjectEuler.LargestPalindromeProductOfTwoNumbers(4));
-
-      Console.WriteLine(ProjectEuler.IsPalindrome(906609));
+      //Console.WriteLine(ProjectEuler.LargestPalindromeProductOfTwoNumbers(4));
+      Console.WriteLine($"{ProjectEuler.SmallestDivisibleNumberByAllNumbers(20)}");
 
 
       
