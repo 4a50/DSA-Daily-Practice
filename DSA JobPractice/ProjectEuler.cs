@@ -137,5 +137,39 @@ namespace DSA_JobPractice
       }
     return counter - n;
   }
+  public static double DiffSumSquaresAndSquareOfSum(int num)
+  {
+      double sumSquares = 0;
+      double squareOfSum = 0;
+
+      for(int i = 1; i <= num; i++)
+      {
+        sumSquares += Math.Pow(i, 2);
+        squareOfSum += i;
+      }
+      squareOfSum = Math.Pow(squareOfSum, 2);      
+      
+      return squareOfSum - sumSquares;
+  }
+  public static double NthPrimeNumber(int nPrime)
+    {
+      int counter = 0;
+      int intTracker = 0;
+      bool isPrime;
+      while (counter <= nPrime)
+      {
+        intTracker++;
+        isPrime = true;
+        for (int i = 2; i < intTracker; i++)
+        {
+          if (intTracker % i == 0) isPrime = false;
+        }
+        if (isPrime) counter++;
+      }
+
+      
+      return intTracker;
+    }
+
   }
 }

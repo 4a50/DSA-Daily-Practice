@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Numerics;
 using DataStructures;
 
@@ -17,10 +18,15 @@ namespace DSA_JobPractice
       //Console.WriteLine("Even Fibonacci Nums: " + EulerProject.EvenFibonacciNumbers(4000000));
       //Console.WriteLine($"Largest Prime for 600851475143: {EulerProject.SearchForLargestPrime(600851475143)}");
       //Console.WriteLine(ProjectEuler.LargestPalindromeProductOfTwoNumbers(4));
-      Console.WriteLine($"{ProjectEuler.SmallestDivisibleNumberByAllNumbers(20)}");
-
-
-      
+      //Console.WriteLine($"{ProjectEuler.SmallestDivisibleNumberByAllNumbers(20)}");
+      //Console.WriteLine($"{ProjectEuler.DiffSumSquaresAndSquareOfSum(100)}");
+      Stopwatch sw = new Stopwatch();
+      sw.Start();
+      Console.WriteLine(ProjectEuler.NthPrimeNumber(10001));
+      sw.Stop();
+      TimeSpan ts = sw.Elapsed;
+      Console.WriteLine($"{ts.Minutes} {ts.Seconds}");
+            
     }
     public static void DisplayArray(int[] arr)
     {
@@ -120,6 +126,7 @@ namespace DSA_JobPractice
       Console.WriteLine();
 
     }
+
   }
 }
 
