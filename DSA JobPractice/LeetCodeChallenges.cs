@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataStructures;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,6 +7,21 @@ namespace DSA_JobPractice
 {
   static class LeetCodeChallenges
   {
+    
+
+    public static bool HasCycle(DataStructures.LinkedList<int> list)
+    {
+      List<Node<int>> listNodes = new List<Node<int>>();
+      Node<int> curNode = list.Head;
+
+      while (curNode.Next != null)
+      {
+        if (listNodes.Contains(curNode.Next)) return true;
+        else { listNodes.Add(curNode.Next); }
+        curNode = curNode.Next;
+      }
+      return false;
+    }
     public static bool DailyFour(int[] nums)
     {
       ///This was NOT solved in 1 Hour.  Looked up answer for education.
@@ -126,8 +142,33 @@ namespace DSA_JobPractice
       return result;
     }
 
+    //1694
+    public static string ReformatPhoneNumber(string input)
+    {
+      //input = 1-23-45 6
+      //sift out - and " " 
+      input = input.Replace("-", "");
+      input = input.Replace(" ", "");
+      Console.WriteLine(input);
+      int lenInput = input.Length;
+      int idxPoint = 0;
+      int lenIdxDiff = 0;
+      //length <= 3 return the string      
+      if (lenInput <= 3) return input;
+      StringBuilder sb = new StringBuilder();
+      sb.Append($"{input.Substring(0, 3)}");
+      idxPoint = 2;
 
+      while (++idxPoint < lenInput)
+      {
+        lenIdxDiff = lenInput - idxPoint;
+        if (lenIdxDiff % 3 == 0) sb.Append($"-{input.Substring(idxPoint)}");
+        Console.WriteLine($"{lenInput - idxPoint} {input[idxPoint]} {lenIdxDiff % 3}");
+      }
+      Console.WriteLine(sb.ToString());
 
+      return "";
+    }
 
   }
 }

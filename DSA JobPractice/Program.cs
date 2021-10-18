@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Numerics;
 using DataStructures;
 
@@ -8,14 +9,130 @@ namespace DSA_JobPractice
   class Program
   {
     static void Main(string[] args)
+
+    {      
+     Console.WriteLine(HackerRankChallenges.diagonalDifference(SeedData.GetSquareMatrix()));
+    }
+    public static int minimumDistance(List<List<int>> area)
     {
-      int[] arr = new int[] { 4, 2, 1, 1, 2 };
-      List<bool> result = MicrosoftPrep.KidsWithCandies(arr, 1);
-      foreach(bool b in result)
+      //[
+      // [*1, 0, 0],
+      // [1, 0, 0],
+      // [1, 9, 1]
+      //]      
+      //create a two int array to track truck distance.
+      int[] truckDistance = new int[2];
+      int[] truckLoc = new int[2];
+
+      while (truckLoc[0] < area.Count && truckLoc[1] < area[0].Count)
       {
-        Console.Write($"[{b}] ");
+        if (area[truckLoc[0]][truckLoc[1] + 1] == 1) {
+          truckLoc[1]++;
+          truckDistance[1]++;
+        }
+        else if (area[truckLoc[0] + 1][truckLoc[1]] == 1)
+        {
+          truckLoc[0]++;
+          truckDistance[0]++;
+        }
+        else if (area[truckLoc[0] + 1][truckLoc[1]] == 9 || area[truckLoc[0]][truckLoc[1] + 1] == 9)
+        {
+          return truckDistance[0] + truckDistance[1] + 1;
+        }
+        
+
+
+        //look in each direction to determine if truck can move.
+        //if adjacent is open add to truck distance, set truck to new cell
+        //if adjacent is destination add 1 
+        // return the sum of the array
+        //
       }
-      Console.WriteLine();
+      return -1;
+    }
+
+
+    /// <summary>
+    /// Amazon Question 1
+    /// </summary>
+    /// <param name="parts"></param>
+    /// <returns></returns>
+
+    
+    public static int combineParts(List<int> parts)
+    {
+      //PD: Estimate time it will take for a worker to create the item to be ready for a customer shipment
+
+      //Time required to put two parts together is the sum of the parts sizes
+      //the newly constructed part is equal to the sum of the part's sizes
+
+      //process is repeated until all parts have been merged together to for the final product
+
+      //Input: array of ints
+      //Output int for min time to assemble all parts
+
+      //test: odd number of items
+
+      //sort the array, for least to greatest.
+      //create a variable sum to track total time.
+
+      //iterate through the array (while)
+      //add to sum -> arr[idx] + arr[idx + 1]
+      //exit array when idx + 1 <= arr.length -1
+
+      //2, 5, 12, 13 = 32
+      //7, 12, 13 -> 19, 13
+      //19, 13 -> 32
+      //recursion?      
+      //func sortadd -> list, sum
+      //if list length <= 1 return sum
+      //sort list
+      //sum += list[0], list[1]
+      //remove items [0] and [1]
+      //return sortAdd(list, sum)
+      int[] sum = new int[] { 0 };
+      SortAdd(parts);
+      return parts[0];
+    }
+    //8, 4, 6, 12
+    //8, 10, 12
+    //18, 12
+    //30
+
+    public static List<int> SortAdd(List<int> list)
+    {
+      if (list.Count <= 1) return list;
+      list.Sort();
+      int sum = list[0] + list[1];
+      list.RemoveRange(0, 2);
+      list.Add(sum);
+      return SortAdd(list);
+      //todo: track the time required (array? or list?)
+
+    }
+    public static char[,] RotateBox(char[,] boxOne)
+    {
+      char[,] boxTwo = new char[boxOne.GetLength(1), boxOne.GetLength(0)];      
+      for (int i = 0; i < boxOne.GetLength(0); i++)
+      {
+        for (int j = 0; j < boxOne.GetLength(1); j++)
+        {
+          boxTwo[j,i] = boxOne[i,j];
+        }
+      }      
+      return boxTwo;
+    }
+    public static void Print2DArray(char[,] charArr)
+    {
+      Console.WriteLine("Called Print");
+      for (int i = 0; i < charArr.GetLength(0); i++)
+      {
+        for (int j = 0; j < charArr.GetLength(1); j++)
+        {
+          Console.Write($"[{charArr[i, j]}] ");
+        }
+        Console.WriteLine();
+      }
     }
     public static int[] CreateTestIntArray(int lowest, int highest, int numElements)
     {
