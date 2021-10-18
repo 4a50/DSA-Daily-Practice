@@ -5,6 +5,62 @@ namespace DSA_JobPractice
 {
   public static class HackerRankChallenges
   {
+    //Completed 10/18/2021
+    public static int diagonalDifference(List<List<int>> arr)
+    {
+      //length of arr (will give rows and columns length)
+      //iterate through each row. starting at ends moving in until end = begin (vice versa)
+      // Taking each value += the Pri diag and secondary diag
+      // subtrach pri diag from secondary diag = abs value
+      // return
+
+      //Edge: not a number.
+
+      int maxIdx = arr.Count - 1;
+      int start = 0;
+      int end = maxIdx;
+      int priCount = 0;
+      int secCount = 0;
+
+      for (int i = 0; i <= maxIdx; i++)
+      {
+        Console.WriteLine($"{arr[i][start]} : {arr[i][end]}");
+        priCount += arr[i][start++];
+        secCount += arr[i][end--];
+      }
+      Console.WriteLine($"Totals: {priCount} {secCount}");
+      return Math.Abs(priCount - secCount);
+    }
+    //Completed 10/15/2021
+    public static int sockMerchant()
+    {
+      //params
+      List<int> ar = new List<int> { 1, 2, 1, 3, 2, 4, 3, 2 };
+      int n = ar.Count;
+      //1,2,1,3,2,4,3,2 <-- 3
+      //2 <--0
+      List<int> arr = new List<int>();
+      int pairCount = 0;
+      if (n == 0 || n == 1) 
+      {
+        Console.WriteLine(0);
+        return 0; 
+      }
+      while (ar.Count > 0)
+      {
+        int curNum = ar[0];
+        ar.Remove(curNum);
+        int matchIdx = ar.FindIndex(num => num == curNum);
+        if (matchIdx != -1)
+        {
+          ar.RemoveAt(matchIdx);
+          pairCount++;
+        }
+      }
+      Console.WriteLine(pairCount);
+      return pairCount;
+    }
+
     //TODO: Optimize the code
     public static string[] weightedUniformStrings(string s, int[] queries)
     {
@@ -171,6 +227,7 @@ namespace DSA_JobPractice
     //  }
       return new List<int>();
     }
-
+    
+    
   }
 }
