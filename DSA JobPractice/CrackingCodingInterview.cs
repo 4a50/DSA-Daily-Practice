@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using DataStructures;
 using System.Text;
 
 namespace DSA_JobPractice
@@ -8,10 +9,10 @@ namespace DSA_JobPractice
   {
     //Chapter 1 Arrays and Strings
     public static bool isUniqueWithHashTable(string str)
-    {      
+    {
       HashMap hashMap = new HashMap();
       bool isUnique = true;
-      foreach(char c in str)
+      foreach (char c in str)
       {
         if (hashMap.Contains(c))
         {
@@ -26,7 +27,39 @@ namespace DSA_JobPractice
       }
       return isUnique;
     }
-  }
+
+
+    //Chapter 2 LinkedLists
+    public static DataStructures.LinkedList<int> RemoveDuplicates(DataStructures.LinkedList<int> ll)
+    {
+      Node<int> curNode = ll.Head;
+      Node<int> trailNode = null;
+      List<int> cacheList = new List<int>();
+
+      while (curNode != null)
+      {
+        if (cacheList.Contains(curNode.Value))
+        {
+          RemoveNode(curNode, trailNode);
+        }
+        else {
+          cacheList.Add(curNode.Value);        
+        trailNode = curNode;
+        }
+        curNode = curNode.Next;
+      }
+      return ll;
+    }
+    private static void RemoveNode(Node<int> curNode, Node<int> trailNode)
+    {
+      if (curNode.Next == null) trailNode.Next = null;
+      else
+      {
+        trailNode.Next = curNode.Next;
+        curNode = curNode.Next;
+      }      
+    }
+  }  
 }
 class HashMap
 {

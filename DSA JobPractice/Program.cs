@@ -11,8 +11,20 @@ namespace DSA_JobPractice
     static void Main(string[] args)
 
     {
-      bool isUnique = CrackingCodingInterview.isUniqueWithHashTable("asdfjkl;");
-      Console.WriteLine("Is string unique: " + isUnique);
+      DataStructures.LinkedList<int> ll = new DataStructures.LinkedList<int>();
+      ll.Add(8);
+      ll.Add(12);
+      ll.Add(8);
+      ll.Add(4);
+      ll.Add(21);
+      ll.Print();
+      CrackingCodingInterview.RemoveDuplicates(ll);
+      ll.Print();
+
+
+
+      //bool isUnique = CrackingCodingInterview.isUniqueWithHashTable("asdfjkl;");
+      //Console.WriteLine("Is string unique: " + isUnique);
       //HackerRankChallenges.miniMaxSum(new List<int> { 1, 3, 5, 7, 9 });
     }
     public static int minimumDistance(List<List<int>> area)
