@@ -10,8 +10,10 @@ namespace DSA_JobPractice
   {
     static void Main(string[] args)
 
-    {      
-     Console.WriteLine(HackerRankChallenges.diagonalDifference(SeedData.GetSquareMatrix()));
+    {
+      bool isUnique = CrackingCodingInterview.isUniqueWithHashTable("asdfjkl;");
+      Console.WriteLine("Is string unique: " + isUnique);
+      //HackerRankChallenges.miniMaxSum(new List<int> { 1, 3, 5, 7, 9 });
     }
     public static int minimumDistance(List<List<int>> area)
     {

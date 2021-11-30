@@ -5,6 +5,21 @@ namespace DSA_JobPractice
 {
   public static class HackerRankChallenges
   {
+    //Completed 10/19/21
+    public static void miniMaxSum(List<int> arr)
+    {
+      //edge case: one or more ints are maxvalues
+      long max = 0;
+      long min = 0;
+      arr.Sort();
+      for (int i = 0; i < arr.Count; i++)
+      {
+        if (i > 0) max += arr[i];
+        if (i < arr.Count - 1) min += arr[i];
+      }
+      Console.WriteLine($"{min} {max}");
+    }
+    
     //Completed 10/18/2021
     public static int diagonalDifference(List<List<int>> arr)
     {
